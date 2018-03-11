@@ -27,13 +27,13 @@ function findWeather() {
       var prevWeatherMatch = targetPrevWeather == null;
       var timeMatch = false;
       for (var i in targetWeather) {
-         if (targetWeather[i] == "" || targetWeather[i] == weather) {
+         if (targetWeather[i] == "" || targetWeather[i] == weather.id) {
             weatherMatch = true;
             break;
          }
       }
       for (var i in targetPrevWeather) {
-         if (targetPrevWeather[i] == "" || targetPrevWeather[i] == prevWeather) {
+         if (targetPrevWeather[i] == "" || targetPrevWeather[i] == prevWeather.id) {
             prevWeatherMatch = true;
          }
       }
@@ -42,7 +42,7 @@ function findWeather() {
       }
       if (weatherMatch && prevWeatherMatch && timeMatch) {
          var weatherDate = new Date(weatherStartTime);
-         $("#weatherTable").append('<tr><td>' + prevWeather + '</td><td>' + weather + '</td><td>' + weatherStartHour + ':00</td><td>' + weatherDate + '</td></tr>');
+         $("#weatherTable").append('<tr><td>' + prevWeather.name + '</td><td>' + weather.name + '</td><td>' + weatherStartHour + ':00</td><td>' + weatherDate + '</td></tr>');
          matches++;
       }
       weatherStartTime += 8 * 175 * 1000; // Increment by 8 Eorzean hours
@@ -60,64 +60,64 @@ function populateWeather() {
    var weathers = WeatherFinder.weatherLists[$("#zoneSelect").val()];
    var selects = $("#weatherSelect").add("#previousWeatherSelect");
    selects.empty();
-   selects.append('<option value="">Any</option>');
+   selects.append('<option value="">全て</option>');
    for (var w in weathers) {
-      selects.append('<option value="' + weathers[w] + '">' + weathers[w] + '</option>');
+      selects.append('<option value="' + weathers[w].id + '">' + weathers[w].name + '</option>');
    }
 }
 </script>
 </head>
 <body>
 <table>
-<tr><td>Zone: </td><td><select id="zoneSelect" onchange="populateWeather()">
-<option value="">Select a Zone</option>
-<option value="Limsa Lominsa">Limsa Lominsa</option>
-<option value="Middle La Noscea">Middle La Noscea</option>
-<option value="Lower La Noscea">Lower La Noscea</option>
-<option value="Eastern La Noscea">Eastern La Noscea</option>
-<option value="Western La Noscea">Western La Noscea</option>
-<option value="Upper La Noscea">Upper La Noscea</option>
-<option value="Outer La Noscea">Outer La Noscea</option>
-<option value="Mist">Mist</option>
-<option value="Gridania">Gridania</option>
-<option value="Central Shroud">Central Shroud</option>
-<option value="East Shroud">East Shroud</option>
-<option value="South Shroud">South Shroud</option>
-<option value="North Shroud">North Shroud</option>
-<option value="The Lavender Beds">The Lavender Beds</option>
-<option value="Ul'dah">Ul'dah</option>
-<option value="Western Thanalan">Western Thanalan</option>
-<option value="Central Thanalan">Central Thanalan</option>
-<option value="Eastern Thanalan">Eastern Thanalan</option>
-<option value="Southern Thanalan">Southern Thanalan</option>
-<option value="Northern Thanalan">Northern Thanalan</option>
-<option value="The Goblet">The Goblet</option>
-<option value="Mor Dhona">Mor Dhona</option>
-<option value="Ishgard">Ishgard</option>
-<option value="Coerthas Central Highlands">Coerthas Central Highlands</option>
-<option value="Coerthas Western Highlands">Coerthas Western Highlands</option>
-<option value="The Sea of Clouds">The Sea of Clouds</option>
-<option value="Azys Lla">Azys Lla</option>
-<option value="The Dravanian Forelands">The Dravanian Forelands</option>
-<option value="The Dravanian Hinterlands">The Dravanian Hinterlands</option>
-<option value="The Churning Mists">The Churning Mists</option>
-<option value="Idyllshire">Idyllshire</option>
-<option value="Rhalgr's Reach">Rhalgr's Reach</option>
-<option value="The Fringes">The Fringes</option>
-<option value="The Peaks">The Peaks</option>
-<option value="The Lochs">The Lochs</option>
-<option value="The Ruby Sea">The Ruby Sea</option>
-<option value="Yanxia">Yanxia</option>
-<option value="The Azim Steppe">The Azim Steppe</option>
-<option value="Kugane">Kugane</option>
+<tr><td>エリア: </td><td><select id="zoneSelect" onchange="populateWeather()">
+<option value="">エリアを選択してください</option>
+<option value="Limsa Lominsa">リムサ・ロミンサ</option>
+<option value="Middle La Noscea">中央ラノシア</option>
+<option value="Lower La Noscea">低地ラノシア</option>
+<option value="Eastern La Noscea">東ラノシア</option>
+<option value="Western La Noscea">西ラノシア</option>
+<option value="Upper La Noscea">高地ラノシア</option>
+<option value="Outer La Noscea">外地ラノシア</option>
+<option value="Mist">ミスト・ヴィレッジ</option>
+<option value="Gridania">グリダニア</option>
+<option value="Central Shroud">黒衣森：中央森林</option>
+<option value="East Shroud">黒衣森：東部森林</option>
+<option value="South Shroud">黒衣森：南部森林</option>
+<option value="North Shroud">黒衣森：北部森林</option>
+<option value="The Lavender Beds">ラベンダーベッド</option>
+<option value="Ul'dah">ウルダハ</option>
+<option value="Western Thanalan">西ザナラーン</option>
+<option value="Central Thanalan">中央ザナラーン</option>
+<option value="Eastern Thanalan">東ザナラーン</option>
+<option value="Southern Thanalan">南ザナラーン</option>
+<option value="Northern Thanalan">北ザナラーン</option>
+<option value="The Goblet">ゴブレットビュート</option>
+<option value="Mor Dhona">モードゥナ</option>
+<option value="Ishgard">イシュガルド</option>
+<option value="Coerthas Central Highlands">クルザス中央高地</option>
+<option value="Coerthas Western Highlands">クルザス西部高地</option>
+<option value="The Sea of Clouds">アバラシア雲海</option>
+<option value="Azys Lla">アジス・ラー</option>
+<option value="The Dravanian Forelands">高地ドラヴァニア</option>
+<option value="The Dravanian Hinterlands">低地ドラヴァニア</option>
+<option value="The Churning Mists">ドラヴァニア雲海</option>
+<option value="Idyllshire">イディルシャイア</option>
+<option value="Rhalgr's Reach">ラールガーズリーチ</option>
+<option value="The Fringes">ギラバニア辺境地帯</option>
+<option value="The Peaks">ギラバニア山岳地帯</option>
+<option value="The Lochs">ギラバニア湖畔地帯</option>
+<option value="The Ruby Sea">紅玉海</option>
+<option value="Yanxia">ヤンサ</option>
+<option value="The Azim Steppe">アジムステップ</option>
+<option value="Kugane">クガネ</option>
 </select></td></tr>
-<tr><td>Desired Weather: </td><td><select id="weatherSelect" multiple="true" size="7"><option value="">Any</option></select></td></tr>
-<tr><td>Transition From: </td><td><select id="previousWeatherSelect" multiple="true" size="7"><option value="">Any</option></select><br/></td></tr>
-<tr><td>Eorzea Time: </td><td><input type="checkbox" name="timeBox" value="0" id="timeBox0" checked="checked"/>00:00-07:59  <br/><input type="checkbox" name="timeBox" value="8" id="timeBox8" checked="checked"/>08:00-15:59  <br/><input type="checkbox" name="timeBox" value="16" id="timeBox16" checked="checked"/>16:00-23:59  <br/></td></tr>
+<tr><td>希望の天候: </td><td><select id="weatherSelect" multiple="true" size="7"><option value="">全て</option></select></td></tr>
+<tr><td>直前の天候: </td><td><select id="previousWeatherSelect" multiple="true" size="7"><option value="">全て</option></select><br/></td></tr>
+<tr><td>エオルゼア時間: </td><td><input type="checkbox" name="timeBox" value="0" id="timeBox0" checked="checked"/>00:00-07:59  <br/><input type="checkbox" name="timeBox" value="8" id="timeBox8" checked="checked"/>08:00-15:59  <br/><input type="checkbox" name="timeBox" value="16" id="timeBox16" checked="checked"/>16:00-23:59  <br/></td></tr>
 </table>
-<button onclick="findWeather()">Find Weather</button><br/>
+<button onclick="findWeather()">天候を検索</button><br/>
 <table id="weatherTable">
-<tr id="weatherTableHeaderRow"><th>Previous Weather</th><th>Current Weather</th><th>Eorzea Time</th><th>Local Time</th></tr>
+<tr id="weatherTableHeaderRow"><th>直前の天候</th><th>現在の天候</th><th>エオルゼア時間</th><th>ローカル時間</th></tr>
 </table>
 <div id="weatherDiv"></div>
 <body>
