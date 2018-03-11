@@ -41,7 +41,7 @@ function findWeather() {
          timeMatch = true;
       }
       if (weatherMatch && prevWeatherMatch && timeMatch) {
-         var weatherDate = new Date(weatherStartTime);
+         var weatherDate = new Date(weatherStartTime).toLocaleString();
          $("#weatherTable").append('<tr><td>' + prevWeather.name + '</td><td>' + weather.name + '</td><td>' + weatherStartHour + ':00</td><td>' + weatherDate + '</td></tr>');
          matches++;
       }
