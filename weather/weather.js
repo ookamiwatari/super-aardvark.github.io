@@ -86,7 +86,8 @@ weatherChances: {
 "Kugane": function(chance) { if ((chance -= 10) < 0) { return {"id":"Rain","name":"雨"}; } else if ((chance -= 10) < 0) { return {"id":"Fog","name":"霧"}; } else if ((chance -= 20) < 0) { return {"id":"Clouds","name":"曇り"}; } else if ((chance -= 40) < 0) { return {"id":"Fair Skies","name":"晴れ"}; } else { return {"id":"Clear Skies","name":"快晴"}; } },
 "The Ruby Sea": function(chance) { if ((chance -= 10) < 0) { return {"id":"Thunder","name":"雷"}; } else if ((chance -= 10) < 0) { return {"id":"Wind","name":"風"}; } else if ((chance -= 15) < 0) { return {"id":"Clouds","name":"曇り"}; } else if ((chance -= 40) < 0) { return {"id":"Fair Skies","name":"晴れ"}; } else { return {"id":"Clear Skies","name":"快晴"}; } },
 "Yanxia": function(chance) { if ((chance -= 5) < 0) { return {"id":"Showers","name":"暴雨"}; } else if ((chance -= 10) < 0) { return {"id":"Rain","name":"雨"}; } else if ((chance -= 10) < 0) { return {"id":"Fog","name":"霧"}; } else if ((chance -= 15) < 0) { return {"id":"Clouds","name":"曇り"}; } else if ((chance -= 40) < 0) { return {"id":"Fair Skies","name":"晴れ"}; } else { return {"id":"Clear Skies","name":"快晴"}; } },
-"The Azim Steppe": function(chance) { if ((chance -= 5) < 0) { return {"id":"Gales","name":"暴風"}; } else if ((chance -= 5) < 0) { return {"id":"Wind","name":"風"}; } else if ((chance -= 7) < 0) { return {"id":"Rain","name":"雨"}; } else if ((chance -= 8) < 0) { return {"id":"Fog","name":"霧"}; } else if ((chance -= 10) < 0) { return {"id":"Clouds","name":"曇り"}; } else if ((chance -= 40) < 0) { return {"id":"Fair Skies","name":"晴れ"}; } else { return {"id":"Clear Skies","name":"快晴"}; } }
+"The Azim Steppe": function(chance) { if ((chance -= 5) < 0) { return {"id":"Gales","name":"暴風"}; } else if ((chance -= 5) < 0) { return {"id":"Wind","name":"風"}; } else if ((chance -= 7) < 0) { return {"id":"Rain","name":"雨"}; } else if ((chance -= 8) < 0) { return {"id":"Fog","name":"霧"}; } else if ((chance -= 10) < 0) { return {"id":"Clouds","name":"曇り"}; } else if ((chance -= 40) < 0) { return {"id":"Fair Skies","name":"晴れ"}; } else { return {"id":"Clear Skies","name":"快晴"}; } },
+"Eureka": function(chance) {if (chance < 30) {return {"id":"Fair Skies","name":"晴れ"};}  else if (chance < 60) {return {"id":"Gales","name":"暴風"};}  else if (chance < 90) {return {"id":"Showers","name":"暴雨"};}  else {return {"id":"Snow","name":"雪"};}}
 },
 
 weatherLists: {
@@ -128,6 +129,7 @@ weatherLists: {
 "Kugane": [{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
 "The Ruby Sea": [{"id":"Thunder","name":"雷"},{"id":"Wind","name":"風"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
 "Yanxia": [{"id":"Showers","name":"暴雨"},{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
-"The Azim Steppe": [{"id":"Gales","name":"暴風"},{"id":"Wind","name":"風"},{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}]
+"The Azim Steppe": [{"id":"Gales","name":"暴風"},{"id":"Wind","name":"風"},{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
+"Eureka": [{"id":"Fair Skies","name":"晴れ"},{"id":"Gales","name":"暴風"},{"id":"Showers","name":"暴雨"},{"id":"Snow","name":"雪"}]
 }
 };
