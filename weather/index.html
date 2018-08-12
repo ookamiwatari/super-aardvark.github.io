@@ -22,7 +22,7 @@ function findWeather() {
    var matches = 0;
    var weather = WeatherFinder.getWeather(weatherStartTime, zone);
    var prevWeather = WeatherFinder.getWeather(weatherStartTime-1, zone);
-   while (tries < 1000 && matches < 5) {
+   while (tries < 1000 && matches < 10) {
       var weatherMatch = targetWeather == null;
       var prevWeatherMatch = targetPrevWeather == null;
       var timeMatch = false;
