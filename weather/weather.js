@@ -10,13 +10,13 @@ calculateForecastTarget: function(timeMillis) {
 
     var unixSeconds = parseInt(timeMillis / 1000);
     // Get Eorzea hour for weather start
-    var bell = unixSeconds / 175;
+    var bell = parseInt(unixSeconds / 175);
 
     // Do the magic 'cause for calculations 16:00 is 0, 00:00 is 8 and 08:00 is 16
     var increment = (bell + 8 - (bell % 8)) % 24;
 
     // Take Eorzea days since unix epoch
-    var totalDays = unixSeconds / 4200;
+    var totalDays = parseInt(unixSeconds / 4200);
     totalDays = (totalDays << 32) >>> 0; // Convert to uint
 
     // 0x64 = 100
@@ -33,14 +33,14 @@ calculateForecastTarget: function(timeMillis) {
 getEorzeaHour: function(timeMillis) {
     var unixSeconds = parseInt(timeMillis / 1000);
     // Get Eorzea hour
-    var bell = (unixSeconds / 175) % 24;
+    var bell = parseInt(unixSeconds / 175) % 24;
     return Math.floor(bell);
 },
 
 getWeatherTimeFloor: function(date) {
     var unixSeconds = parseInt(date.getTime() / 1000);
     // Get Eorzea hour for weather start
-    var bell = (unixSeconds / 175) % 24;
+    var bell = parseInt(unixSeconds / 175) % 24;
     var startBell = bell - (bell % 8);
     var startUnixSeconds = unixSeconds - (175 * (bell - startBell));
     return new Date(startUnixSeconds * 1000);
