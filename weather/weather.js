@@ -16,7 +16,7 @@ calculateForecastTarget: function(timeMillis) {
     var increment = (bell + 8 - (bell % 8)) % 24;
 
     // Take Eorzea days since unix epoch
-    var totalDays = unixSeconds / 4200;
+    var totalDays = parseInt(unixSeconds / 4200);
     totalDays = (totalDays << 32) >>> 0; // Convert to uint
 
     // 0x64 = 100
@@ -43,7 +43,7 @@ getWeatherTimeFloor: function(date) {
     var bell = (unixSeconds / 175) % 24;
     var startBell = bell - (bell % 8);
     var startUnixSeconds = unixSeconds - (175 * (bell - startBell));
-    return new Date(startUnixSeconds * 1000);
+    return new Date(Math.round(startUnixSeconds) * 1000);
 },
 
 weatherChances: {
