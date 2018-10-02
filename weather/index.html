@@ -41,8 +41,9 @@ function findWeather() {
          timeMatch = true;
       }
       if (weatherMatch && prevWeatherMatch && timeMatch) {
-         var weatherDate = new Date(weatherStartTime).toLocaleString();
-         $("#weatherTable").append('<tr><td>' + prevWeather.name + '</td><td>' + weather.name + '</td><td>' + weatherStartHour + ':00</td><td>' + weatherDate + '</td></tr>');
+         var date = new Date(weatherStartTime);
+         var weatherDate = date.getFullYear() + '/' + ( '00'  + ( date.getMonth() + 1 ) ).slice( -2 ) + '/' + ( '00'  + date.getDate() ).slice( -2 ) + ' ' + ( '00'  + date.getHours() ).slice( -2 ) + ':' + ( '00'  + date.getMinutes() ).slice( -2 ) + ':' + ( '00'  + date.getSeconds() ).slice( -2 );
+         $("#weatherTable").append('<tr><td>' + prevWeather.name + '</td><td>' + weather.name + '</td><td>' + ( '00'  + weatherStartHour ).slice( -2 ) + ':00</td><td>' + weatherDate + '</td></tr>');
          matches++;
       }
       weatherStartTime += 8 * 175 * 1000; // Increment by 8 Eorzean hours
