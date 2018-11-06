@@ -100,7 +100,8 @@ weatherChances: {
   else if (chance < 64) {return {"id":"Snow","name":"雪"};}
   else if (chance < 82) {return {"id":"Thunder","name":"雷"};}
   else {return {"id":"Blizzards","name":"吹雪"};}
-}
+},
+"Pyros": function(chance) { if (chance < 10) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 28) {return {"id":"Heat Waves","name":"灼熱波"};} else if (chance < 46) {return {"id":"Thunder","name":"雷"};} else if (chance < 64) {return {"id":"Blizzard","name":"吹雪"};} else if (chance < 82) {return {"id":"Umbral Wind","name":"霊風"};} else {return {"id":"Snow","name":"雪"};}}
 },
 
 weatherLists: {
@@ -144,6 +145,7 @@ weatherLists: {
 "Yanxia": [{"id":"Showers","name":"暴雨"},{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
 "The Azim Steppe": [{"id":"Gales","name":"暴風"},{"id":"Wind","name":"風"},{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
 "Anemos": [{"id":"Fair Skies","name":"晴れ"},{"id":"Gales","name":"暴風"},{"id":"Showers","name":"暴雨"},{"id":"Snow","name":"雪"},{"id":"unknown","name":"不明"}],
-"Pagos": [{"id":"Fair Skies","name":"晴れ"},{"id":"Fog","name":"霧"},{"id":"Heat Waves","name":"灼熱波"},{"id":"Snow","name":"雪"},{"id":"Thunder","name":"雷"},{"id":"Blizzards","name":"吹雪"}]
+"Pagos": [{"id":"Fair Skies","name":"晴れ"},{"id":"Fog","name":"霧"},{"id":"Heat Waves","name":"灼熱波"},{"id":"Snow","name":"雪"},{"id":"Thunder","name":"雷"},{"id":"Blizzards","name":"吹雪"}],
+"Pyros": [{"id":"Fair Skies","name":"晴れ"},{"id":"Heat Waves","name":"灼熱波"},{"id":"Thunder","name":"雷"},{"id":"Blizzard","name":"吹雪"},{"id":"Umbral Wind","name":"霊風"},{"id":"Snow","name":"雪"}]
 }
 };
