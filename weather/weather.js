@@ -102,7 +102,15 @@ weatherChances: {
   else {return {"id":"Blizzards","name":"吹雪"};}
 },
 "Pyros": function(chance) { if (chance < 10) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 28) {return {"id":"Heat Waves","name":"灼熱波"};} else if (chance < 46) {return {"id":"Thunder","name":"雷"};} else if (chance < 64) {return {"id":"Blizzard","name":"吹雪"};} else if (chance < 82) {return {"id":"Umbral Wind","name":"霊風"};} else {return {"id":"Snow","name":"雪"};}},
-"Hydatos": function(chance) { if (chance < 12) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 34) {return {"id":"Showers","name":"暴雨"};} else if (chance < 56) {return {"id":"Gloom","name":"妖霧"};} else if (chance < 78) {return {"id":"Thunderstorms","name":"雷雨"};} else {return {"id":"Snow","name":"雪"};}}
+"Hydatos": function(chance) { if (chance < 12) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 34) {return {"id":"Showers","name":"暴雨"};} else if (chance < 56) {return {"id":"Gloom","name":"妖霧"};} else if (chance < 78) {return {"id":"Thunderstorms","name":"雷雨"};} else {return {"id":"Snow","name":"雪"};}},
+"The Crystarium": function(chance) { if (chance < 20) {return {"id":"Clear Skies","name":"快晴"};} else if (chance < 60) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 75) {return {"id":"Clouds","name":"曇り"};} else if (chance < 85) {return {"id":"Fog","name":"霧"};} else if (chance < 95) {return {"id":"Rain","name":"雨"};} else {return {"id":"Thunderstorms","name":"雷雨"};}},
+"Eulmore": function(chance) { if (chance < 10) {return {"id":"Gales","name":"暴風"};} else if (chance < 20) {return {"id":"Rain","name":"雨"};} else if (chance < 30) {return {"id":"Fog","name":"霧"};} else if (chance < 45) {return {"id":"Clouds","name":"曇り"};} else if (chance < 85) {return {"id":"Fair Skies","name":"晴れ"};} else {return {"id":"Clear Skies","name":"快晴"};}},
+"Lakeland": function(chance) { if (chance < 20) {return {"id":"Clear Skies","name":"快晴"};} else if (chance < 60) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 75) {return {"id":"Clouds","name":"曇り"};} else if (chance < 85) {return {"id":"Fog","name":"霧"};} else if (chance < 95) {return {"id":"Rain","name":"雨"};} else {return {"id":"Thunderstorms","name":"雷雨"};}},
+"Kholusia": function(chance) { if (chance < 10) {return {"id":"Gales","name":"暴風"};} else if (chance < 20) {return {"id":"Rain","name":"雨"};} else if (chance < 30) {return {"id":"Fog","name":"霧"};} else if (chance < 45) {return {"id":"Clouds","name":"曇り"};} else if (chance < 85) {return {"id":"Fair Skies","name":"晴れ"};} else {return {"id":"Clear Skies","name":"快晴"};}},
+"Amh Araeng": function(chance) { if (chance < 45) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 60) {return {"id":"Clouds","name":"曇り"};} else if (chance < 70) {return {"id":"Dust Storms","name":"砂塵"};} else if (chance < 80) {return {"id":"Heat Waves","name":"灼熱波"};} else {return {"id":"Clear Skies","name":"快晴"};}},
+"Il Mheg": function(chance) { if (chance < 10) {return {"id":"Rain","name":"雨"};} else if (chance < 20) {return {"id":"Fog","name":"霧"};} else if (chance < 35) {return {"id":"Clouds","name":"曇り"};} else if (chance < 45) {return {"id":"Thunderstorms","name":"雷雨"};} else if (chance < 60) {return {"id":"Clear Skies","name":"快晴"};} else {return {"id":"Fair Skies","name":"晴れ"};}},
+"The Rak'tika Greatwood": function(chance) { if (chance < 10) {return {"id":"Fog","name":"霧"};} else if (chance < 20) {return {"id":"Rain","name":"雨"};} else if (chance < 30) {return {"id":"Umbral Wind","name":"霊風"};} else if (chance < 45) {return {"id":"Clear Skies","name":"快晴"};} else if (chance < 85) {return {"id":"Fair Skies","name":"晴れ"};} else {return {"id":"Clouds","name":"曇り"};}},
+"The Tempest": function(chance) { if (chance < 20) {return {"id":"Clouds","name":"曇り"};} else if (chance < 80) {return {"id":"Fair Skies","name":"晴れ"};} else {return {"id":"Clear Skies","name":"快晴"};}}
 },
 
 weatherLists: {
@@ -148,6 +156,14 @@ weatherLists: {
 "Anemos": [{"id":"Fair Skies","name":"晴れ"},{"id":"Gales","name":"暴風"},{"id":"Showers","name":"暴雨"},{"id":"Snow","name":"雪"}],
 "Pagos": [{"id":"Fair Skies","name":"晴れ"},{"id":"Fog","name":"霧"},{"id":"Heat Waves","name":"灼熱波"},{"id":"Snow","name":"雪"},{"id":"Thunder","name":"雷"},{"id":"Blizzards","name":"吹雪"}],
 "Pyros": [{"id":"Fair Skies","name":"晴れ"},{"id":"Heat Waves","name":"灼熱波"},{"id":"Thunder","name":"雷"},{"id":"Blizzard","name":"吹雪"},{"id":"Umbral Wind","name":"霊風"},{"id":"Snow","name":"雪"}],
-"Hydatos": [{"id":"Fair Skies","name":"晴れ"},{"id":"Showers","name":"暴雨"},{"id":"Gloom","name":"妖霧"},{"id":"Thunderstorms","name":"雷雨"},{"id":"Snow","name":"雪"}]
+"Hydatos": [{"id":"Fair Skies","name":"晴れ"},{"id":"Showers","name":"暴雨"},{"id":"Gloom","name":"妖霧"},{"id":"Thunderstorms","name":"雷雨"},{"id":"Snow","name":"雪"}],
+"The Crystarium": [{"id":"Clear Skies","name":"快晴"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clouds","name":"曇り"},{"id":"Fog","name":"霧"},{"id":"Rain","name":"雨"},{"id":"Thunderstorms","name":"雷雨"}],
+"Eulmore": [{"id":"Gales","name":"暴風"},{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
+"Lakeland": [{"id":"Clear Skies","name":"快晴"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clouds","name":"曇り"},{"id":"Fog","name":"霧"},{"id":"Rain","name":"雨"},{"id":"Thunderstorms","name":"雷雨"}],
+"Kholusia": [{"id":"Gales","name":"暴風"},{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
+"Amh Araeng": [{"id":"Fair Skies","name":"晴れ"},{"id":"Clouds","name":"曇り"},{"id":"Dust Storms","name":"砂塵"},{"id":"Heat Waves","name":"灼熱波"},{"id":"Clear Skies","name":"快晴"}],
+"Il Mheg": [{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Thunderstorms","name":"雷雨"},{"id":"Clear Skies","name":"快晴"},{"id":"Fair Skies","name":"晴れ"}],
+"The Rak'tika Greatwood": [{"id":"Fog","name":"霧"},{"id":"Rain","name":"雨"},{"id":"Umbral Wind","name":"霊風"},{"id":"Clear Skies","name":"快晴"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clouds","name":"曇り"}],
+"The Tempest": [{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}]
 }
 };
