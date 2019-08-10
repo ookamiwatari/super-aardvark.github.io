@@ -17,6 +17,7 @@ function findWeather() {
    var zone = $("#zoneSelect").val();
    var targetWeather = $("#weatherSelect").val();
    var targetPrevWeather = $("#previousWeatherSelect").val();
+   window.history.pushState(null, null, location.pathname + "?zone=" + zone + "&targetWeather=" + targetWeather + "&targetPrevWeather=" + targetPrevWeather + "&time="+$("#timeBox0").is(":checked")+","+$("#timeBox8").is(":checked")+","+$("#timeBox16").is(":checked")+"&memo="+encodeURI($("#memo").val()));
    var tries = 0;
    var matches = 0;
    var weather = WeatherFinder.getWeather(weatherStartTime, zone);
@@ -64,6 +65,20 @@ function populateWeather() {
    for (var w in weathers) {
       selects.append('<option value="' + weathers[w].id + '">' + weathers[w].name + '</option>');
    }
+}
+
+window.onload = function() {
+   try {
+      $("#zoneSelect").val(location.search.match(/zone=([^&]*)/)[1].replace(/%(25)?20/g, " "));
+      populateWeather();
+      $("#weatherSelect").val(location.search.match(/targetWeather=([^&]*)/)[1].replace(/%20/g, " ").split(","));
+      $("#previousWeatherSelect").val(location.search.match(/targetPrevWeather=([^&]*)/)[1].replace(/%20/g, " ").split(","));
+      $("#timeBox0").prop("checked", location.search.match(/time=([^&]*)/)[1].split(",")[0]=="true");
+      $("#timeBox8").prop("checked", location.search.match(/time=([^&]*)/)[1].split(",")[1]=="true");
+      $("#timeBox16").prop("checked", location.search.match(/time=([^&]*)/)[1].split(",")[2]=="true");
+      $("#memo").val(decodeURI(decodeURI(location.search.match(/memo=([^&]*)/)[1])));
+      findWeather();
+   } catch(e){};
 }
 </script>
 </head>
