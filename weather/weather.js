@@ -111,7 +111,8 @@ weatherChances: {
 "Il Mheg": function(chance) { if (chance < 10) {return {"id":"Rain","name":"雨"};} else if (chance < 20) {return {"id":"Fog","name":"霧"};} else if (chance < 35) {return {"id":"Clouds","name":"曇り"};} else if (chance < 45) {return {"id":"Thunderstorms","name":"雷雨"};} else if (chance < 60) {return {"id":"Clear Skies","name":"快晴"};} else {return {"id":"Fair Skies","name":"晴れ"};}},
 "The Rak'tika Greatwood": function(chance) { if (chance < 10) {return {"id":"Fog","name":"霧"};} else if (chance < 20) {return {"id":"Rain","name":"雨"};} else if (chance < 30) {return {"id":"Umbral Wind","name":"霊風"};} else if (chance < 45) {return {"id":"Clear Skies","name":"快晴"};} else if (chance < 85) {return {"id":"Fair Skies","name":"晴れ"};} else {return {"id":"Clouds","name":"曇り"};}},
 "The Tempest": function(chance) { if (chance < 20) {return {"id":"Clouds","name":"曇り"};} else if (chance < 80) {return {"id":"Fair Skies","name":"晴れ"};} else {return {"id":"Clear Skies","name":"快晴"};}},
-"Bozjan Southern Front": function(chance) { if (chance < 52) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 64) {return {"id":"Rain","name":"雨"}; } else if (chance < 76) {return {"id":"Wind","name":"風"};} else if (chance < 88) {return {"id":"Thunder","name":"雷"};} else {return {"id":"Dust Storms","name":"砂塵"};}}
+"Bozjan Southern Front": function(chance) { if (chance < 52) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 64) {return {"id":"Rain","name":"雨"}; } else if (chance < 76) {return {"id":"Wind","name":"風"};} else if (chance < 88) {return {"id":"Thunder","name":"雷"};} else {return {"id":"Dust Storms","name":"砂塵"};}},
+"Zadnor": function(chance) { if (chance < 60) {return {"id":"Fair Skies","name":"晴れ"};} else if (chance < 70) {return {"id":"Rain","name":"雨"}; } else if (chance < 80) {return {"id":"Wind","name":"風"};} else if (chance < 90) {return {"id":"Thunder","name":"雷"};} else {return {"id":"Snow","name":"雪"};}}
 },
 
 weatherLists: {
@@ -166,6 +167,7 @@ weatherLists: {
 "Il Mheg": [{"id":"Rain","name":"雨"},{"id":"Fog","name":"霧"},{"id":"Clouds","name":"曇り"},{"id":"Thunderstorms","name":"雷雨"},{"id":"Clear Skies","name":"快晴"},{"id":"Fair Skies","name":"晴れ"}],
 "The Rak'tika Greatwood": [{"id":"Fog","name":"霧"},{"id":"Rain","name":"雨"},{"id":"Umbral Wind","name":"霊風"},{"id":"Clear Skies","name":"快晴"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clouds","name":"曇り"}],
 "The Tempest": [{"id":"Clouds","name":"曇り"},{"id":"Fair Skies","name":"晴れ"},{"id":"Clear Skies","name":"快晴"}],
-"Bozjan Southern Front":[{"id":"Fair Skies","name":"晴れ"},{"id":"Rain","name":"雨"},{"id":"Wind","name":"風"},{"id":"Thunder","name":"雷"},{"id":"Dust Storms","name":"砂塵"}]
+"Bozjan Southern Front":[{"id":"Fair Skies","name":"晴れ"},{"id":"Rain","name":"雨"},{"id":"Wind","name":"風"},{"id":"Thunder","name":"雷"},{"id":"Dust Storms","name":"砂塵"}],
+"Zadnor":[{"id":"Fair Skies","name":"晴れ"},{"id":"Rain","name":"雨"},{"id":"Wind","name":"風"},{"id":"Thunder","name":"雷"},{"id":"Snow","name":"雪"}]
 }
 };
